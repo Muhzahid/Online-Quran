@@ -5,9 +5,12 @@ services:
     rootDir: backend
     buildCommand: npm install
     startCommand: npm start
+    healthCheckPath: /api/health
     envVars:
       - key: NODE_ENV
         value: production
+      - key: JWT_EXPIRES_IN
+        value: 7d
       - key: MONGO_URI
         sync: false
       - key: JWT_SECRET
