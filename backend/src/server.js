@@ -11,7 +11,7 @@ const startServer = async () => {
   try {
     await connectDB();
 
-    server.listen(config.port, () => {
+    server.listen(config.port, '0.0.0.0', () => {
       console.log(`Server running in ${config.nodeEnv} mode on port ${config.port}`);
       console.log(`Health check: http://localhost:${config.port}/api/health`);
     });
