@@ -1,0 +1,14 @@
+{
+  "name": "quran-academy",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "npm --prefix backend run dev",
+    "build": "npm --prefix frontend run build",
+    "lint": "npm --prefix frontend run lint",
+    "test": "npm --prefix backend test",
+    "start": "npm --prefix backend run start",
+    "seed": "npm --prefix backend run seed"
+  }
+}

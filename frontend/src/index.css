@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #174f3b;
+  --color-primary-dark: #0d3428;
+  --color-primary-light: #2d7457;
+  --color-secondary: #b59662;
+  --color-secondary-dark: #8b6b3d;
+  --color-secondary-light: #d9c08c;
+  --color-background: #f5f1e8;
+  --color-surface: #fffdf8;
+  --color-text: #24302b;
+  --color-text-muted: #6f766f;
+  --color-border: #ded8ca;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Manrope", "Segoe UI", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-text font-body antialiased;
+    background-image: linear-gradient(rgba(23, 79, 59, 0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(23, 79, 59, 0.025) 1px, transparent 1px);
+    background-size: 34px 34px;
+  }
+
+  ::selection {
+    background: #d9c08c;
+    color: #0d3428;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+
+  button,
+  a,
+  input,
+  textarea,
+  select {
+    transition: border-color 180ms ease, background-color 180ms ease, color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+  }
+}
